@@ -406,13 +406,23 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920');
+    background-image: url(../img/Banner.webp);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin-top: 70px;
     overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 0;
 }
 
 .hero-overlay {
@@ -421,29 +431,16 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(30, 64, 175, 0.9) 100%);
+    background: rgba(255, 255, 255, 0.058);
+    backdrop-filter: blur(1px);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    z-index: 0;
 }
 
 .hero-particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-    animation: particles 20s ease-in-out infinite;
-}
-
-@keyframes particles {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        transform: translateY(-20px) scale(1.1);
-    }
+    display: none;
 }
 
 .hero-content {
@@ -451,30 +448,32 @@ button {
     z-index: 1;
     text-align: center;
     color: var(--bg-white);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     max-width: 900px;
+    
 }
 
 .hero-badge {
     display: inline-block;
-    padding: var(--spacing-xs) var(--spacing-md);
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    padding: var(--spacing-xs) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 50px;
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--spacing-lg);
     animation: fadeInUp 0.8s ease-out;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .hero-title {
     font-size: var(--font-size-3xl);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-md);
-    line-height: 1.2;
+    line-height: 1.3;
     animation: fadeInUp 0.8s ease-out 0.2s both;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
@@ -482,7 +481,11 @@ button {
     margin-bottom: var(--spacing-xl);
     opacity: 0.95;
     animation: fadeInUp 0.8s ease-out 0.4s both;
-    line-height: 1.7;
+    line-height: 1.8;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
@@ -496,36 +499,39 @@ button {
 
 .cta-button {
     display: inline-block;
-    padding: var(--spacing-md) var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-2xl);
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-semibold);
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: all var(--transition-base);
     text-align: center;
+    min-width: 180px;
 }
 
 .cta-primary {
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--secondary-color), #059669);
     color: var(--bg-white);
 }
 
 .cta-primary:hover {
-    background-color: #10b981;
+    background: linear-gradient(135deg, #059669, var(--secondary-color));
     transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
 .cta-secondary {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     color: var(--bg-white);
-    border: 2px solid var(--bg-white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .cta-secondary:hover {
-    background-color: var(--bg-white);
-    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
 .hero-stats {
@@ -534,12 +540,19 @@ button {
     gap: var(--spacing-2xl);
     flex-wrap: wrap;
     padding-top: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
 .stat-item {
     text-align: center;
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 120px;
 }
 
 .stat-number {
@@ -548,49 +561,22 @@ button {
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-xs);
     color: var(--bg-white);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, var(--bg-white), rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .stat-label {
     display: block;
     font-size: var(--font-size-sm);
-    opacity: 0.9;
+    opacity: 0.95;
     color: var(--bg-white);
+    font-weight: var(--font-weight-medium);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-.hero-scroll {
-    position: absolute;
-    bottom: var(--spacing-xl);
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: var(--bg-white);
-    animation: bounce 2s infinite;
-    z-index: 1;
-}
-
-.scroll-text {
-    display: block;
-    font-size: var(--font-size-xs);
-    margin-bottom: var(--spacing-xs);
-    opacity: 0.8;
-}
-
-.scroll-arrow {
-    font-size: var(--font-size-2xl);
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0) translateX(-50%);
-    }
-    40% {
-        transform: translateY(-10px) translateX(-50%);
-    }
-    60% {
-        transform: translateY(-5px) translateX(-50%);
-    }
-}
 
 @keyframes fadeInUp {
     from {
@@ -1591,8 +1577,17 @@ section {
         font-size: var(--font-size-xl);
     }
 
+    .hero-content {
+        padding: var(--spacing-2xl);
+        max-width: 1000px;
+    }
+
     .hero-stats {
         gap: var(--spacing-3xl);
+    }
+
+    .stat-item {
+        min-width: 140px;
     }
 
     .tours-grid {
@@ -1685,12 +1680,25 @@ section {
         height: 100vh;
     }
 
+    .hero-content {
+        padding: var(--spacing-3xl);
+    }
+
     .hero-title {
         font-size: var(--font-size-5xl);
     }
 
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+        max-width: 800px;
+    }
+
     .hero-buttons {
         flex-wrap: nowrap;
+    }
+
+    .stat-number {
+        font-size: var(--font-size-4xl);
     }
 
     .tours-grid {
