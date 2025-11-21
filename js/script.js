@@ -42,11 +42,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    // Simple active nav link on click - No scroll detection
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-            if (href !== '#' && href !== '') {
+            
+            // Remove active from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            // Add active to clicked link
+            this.classList.add('active');
+
+            // Smooth scroll if it's an anchor link
+            if (href && href !== '#' && href.startsWith('#')) {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
@@ -62,31 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Active nav link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
-
-    function setActiveLink() {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const sectionHeight = section.clientHeight;
-            if (sectionTop <= 100 && sectionTop + sectionHeight > 100) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', setActiveLink);
-    setActiveLink();
 
     // Newsletter form submission
     const newsletterForm = document.querySelector('.newsletter-form');

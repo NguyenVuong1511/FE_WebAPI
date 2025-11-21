@@ -2,19 +2,19 @@
    CSS Variables - Mobile First Approach
    ============================================ */
 :root {
-    /* Colors */
-    --primary-color: #2563eb;
-    --primary-dark: #1e40af;
-    --primary-light: #3b82f6;
-    --secondary-color: #10b981;
-    --accent-color: #f59e0b;
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --text-light: #9ca3af;
+    /* Colors - Simple & Elegant Travel Theme */
+    --primary-color: #2563eb;        /* Blue - Xanh dương */
+    --primary-dark: #1e40af;         /* Darker blue */
+    --primary-light: #3b82f6;        /* Light blue */
+    --secondary-color: #10b981;      /* Green - Xanh lá */
+    --accent-color: #f59e0b;         /* Amber - Cam vàng */
+    --text-primary: #1f2937;          /* Gray 800 */
+    --text-secondary: #6b7280;        /* Gray 500 */
+    --text-light: #9ca3af;            /* Gray 400 */
     --bg-white: #ffffff;
-    --bg-light: #f9fafb;
-    --bg-gray: #f3f4f6;
-    --border-color: #e5e7eb;
+    --bg-light: #f9fafb;              /* Gray 50 */
+    --bg-gray: #f3f4f6;               /* Gray 100 */
+    --border-color: #e5e7eb;          /* Gray 200 */
     --overlay-dark: rgba(0, 0, 0, 0.5);
     --overlay-light: rgba(0, 0, 0, 0.3);
     
@@ -511,7 +511,7 @@ button {
 }
 
 .cta-primary:hover {
-    background-color: #059669;
+    background-color: #10b981;
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }
@@ -1127,7 +1127,7 @@ section {
 }
 
 .services-cta:hover {
-    background-color: #059669;
+    background-color: #10b981;
     transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
 }
