@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website du lịch - Khám phá những điểm đến tuyệt vời">
+    <title>Du Lịch Việt Nam - Trang Chủ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-icon">🌴</span>
+                            <span class="logo-text">Du Lịch Việt</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#tours" class="nav-link">Tour</a></li>
+                        <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                        <li><a href="#destinations" class="nav-link">Điểm đến</a></li>
+                        <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+                    </ul>
+                    
+                    <!-- Hamburger Menu Button -->
+                    <button class="hamburger" aria-label="Toggle menu">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-menu">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#tours" class="mobile-nav-link">Tour</a></li>
+                <li><a href="#about" class="mobile-nav-link">Giới thiệu</a></li>
+                <li><a href="#destinations" class="mobile-nav-link">Điểm đến</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Liên hệ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
+            <div class="hero-content">
+                <div class="hero-badge">Khám Phá Việt Nam</div>
+                <h1 class="hero-title">Khám Phá Vẻ Đẹp Việt Nam</h1>
+                <p class="hero-subtitle">Trải nghiệm những hành trình tuyệt vời và tạo nên kỷ niệm đáng nhớ cùng chúng tôi</p>
+                <div class="hero-buttons">
+                    <a href="#tours" class="cta-button cta-primary">Khám phá Tour</a>
+                    <a href="#about" class="cta-button cta-secondary">Tìm hiểu thêm</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Tour du lịch</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Khách hàng</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Điểm đến</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <span class="scroll-text">Cuộn xuống</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </section>
+
+        <!-- Section 1: Giới thiệu -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-content">
+                        <div class="section-badge">Về Chúng Tôi</div>
+                        <h2 class="section-title">Chúng Tôi Là Ai?</h2>
+                        <p class="about-description">
+                            <strong>Du Lịch Việt</strong> là công ty du lịch hàng đầu tại Việt Nam, chuyên tổ chức các tour du lịch chất lượng cao với hơn 10 năm kinh nghiệm trong ngành. Chúng tôi tự hào đã phục vụ hơn 10,000 khách hàng và mang đến những trải nghiệm du lịch đáng nhớ.
+                        </p>
+                        <p class="about-description">
+                            Với đội ngũ hướng dẫn viên chuyên nghiệp, giàu kinh nghiệm và đam mê du lịch, chúng tôi cam kết mang đến cho bạn những hành trình khám phá đầy thú vị, an toàn và tiết kiệm.
+                        </p>
+                        <div class="about-features">
+                            <div class="about-feature-item">
+                                <div class="feature-icon-small">✓</div>
+                                <span>Hơn 10 năm kinh nghiệm</span>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="feature-icon-small">✓</div>
+                                <span>Đội ngũ chuyên nghiệp</span>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="feature-icon-small">✓</div>
+                                <span>Giá cả hợp lý</span>
+                            </div>
+                            <div class="about-feature-item">
+                                <div class="feature-icon-small">✓</div>
+                                <span>Dịch vụ 24/7</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="about-cta">Liên hệ với chúng tôi</a>
+                    </div>
+                    <div class="about-image">
+                        <div class="about-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Về chúng tôi" loading="lazy">
+                            <div class="about-image-overlay"></div>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-card-icon">🏆</div>
+                            <h3 class="about-card-title">Giải thưởng</h3>
+                            <p class="about-card-text">Công ty du lịch tốt nhất 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Tour Nổi Bật -->
+        <section id="tours" class="featured-tours">
+            <div class="container">
+                <h2 class="section-title">Tour Nổi Bật</h2>
+                <p class="section-subtitle">Những hành trình được yêu thích nhất</p>
+                
+                <div class="tours-grid">
+                    <article class="tour-card">
+                        <div class="tour-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800" alt="Tour Hạ Long" loading="lazy">
+                            <span class="tour-badge">Phổ biến</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Vịnh Hạ Long - Kỳ Quan Thiên Nhiên</h3>
+                            <p class="tour-description">Khám phá vẻ đẹp hùng vĩ của vịnh Hạ Long với hàng nghìn đảo đá vôi độc đáo</p>
+                            <div class="tour-footer">
+                                <span class="tour-price">2.500.000₫</span>
+                                <span class="tour-duration">3 ngày 2 đêm</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-card">
+                        <div class="tour-image">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800" alt="Tour Sapa" loading="lazy">
+                            <span class="tour-badge">Mới</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Sapa - Núi Rừng Tây Bắc</h3>
+                            <p class="tour-description">Trải nghiệm văn hóa dân tộc và cảnh quan núi rừng tuyệt đẹp tại Sapa</p>
+                            <div class="tour-footer">
+                                <span class="tour-price">3.200.000₫</span>
+                                <span class="tour-duration">4 ngày 3 đêm</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-card">
+                        <div class="tour-image">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800" alt="Tour Phú Quốc" loading="lazy">
+                            <span class="tour-badge">Yêu thích</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Phú Quốc - Thiên Đường Biển Đảo</h3>
+                            <p class="tour-description">Thư giãn tại những bãi biển tuyệt đẹp và khám phá văn hóa địa phương</p>
+                            <div class="tour-footer">
+                                <span class="tour-price">4.500.000₫</span>
+                                <span class="tour-duration">5 ngày 4 đêm</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tour-card">
+                        <div class="tour-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800" alt="Tour Hội An" loading="lazy">
+                            <span class="tour-badge">Đặc biệt</span>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Hội An - Phố Cổ Di Sản</h3>
+                            <p class="tour-description">Khám phá phố cổ Hội An với kiến trúc cổ kính và ẩm thực đặc sắc</p>
+                            <div class="tour-footer">
+                                <span class="tour-price">2.800.000₫</span>
+                                <span class="tour-duration">3 ngày 2 đêm</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Điểm đến Phổ biến -->
+        <section id="destinations" class="top-destinations">
+            <div class="container">
+                <h2 class="section-title">Điểm Đến Phổ Biến</h2>
+                <p class="section-subtitle">Khám phá những địa danh nổi tiếng nhất Việt Nam</p>
+                
+                <div class="destinations-grid">
+                    <article class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800" alt="Hạ Long" loading="lazy">
+                            <div class="destination-overlay"></div>
+                        </div>
+                        <h3 class="destination-name">Vịnh Hạ Long</h3>
+                    </article>
+
+                    <article class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800" alt="Sapa" loading="lazy">
+                            <div class="destination-overlay"></div>
+                        </div>
+                        <h3 class="destination-name">Sapa</h3>
+                    </article>
+
+                    <article class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Phú Quốc" loading="lazy">
+                            <div class="destination-overlay"></div>
+                        </div>
+                        <h3 class="destination-name">Phú Quốc</h3>
+                    </article>
+
+                    <article class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800" alt="Hội An" loading="lazy">
+                            <div class="destination-overlay"></div>
+                        </div>
+                        <h3 class="destination-name">Hội An</h3>
+                    </article>
+
+                    <article class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800" alt="Đà Lạt" loading="lazy">
+                            <div class="destination-overlay"></div>
+                        </div>
+                        <h3 class="destination-name">Đà Lạt</h3>
+                    </article>
+
+                    <article class="destination-card">
+                        <div class="destination-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Nha Trang" loading="lazy">
+                            <div class="destination-overlay"></div>
+                        </div>
+                        <h3 class="destination-name">Nha Trang</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Tại sao chọn chúng tôi -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">Tại Sao Chọn Chúng Tôi</h2>
+                <p class="section-subtitle">Cam kết mang đến trải nghiệm du lịch tuyệt vời nhất</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">✈️</div>
+                        <h3 class="feature-title">Tour Chất Lượng</h3>
+                        <p class="feature-description">Chúng tôi cung cấp các tour được thiết kế kỹ lưỡng với dịch vụ cao cấp và đảm bảo chất lượng</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3 class="feature-title">Đội Ngũ Chuyên Nghiệp</h3>
+                        <p class="feature-description">Hướng dẫn viên giàu kinh nghiệm và nhiệt tình, luôn sẵn sàng hỗ trợ bạn trong suốt hành trình</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3 class="feature-title">Giá Cả Hợp Lý</h3>
+                        <p class="feature-description">Cung cấp các gói tour với mức giá cạnh tranh, phù hợp với mọi ngân sách của khách hàng</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Ưu đãi Hiện tại / Tour Last Minute -->
+        <section id="deals" class="deals-offers">
+            <div class="container">
+                <h2 class="section-title">Ưu Đãi Đặc Biệt</h2>
+                <p class="section-subtitle">Đừng bỏ lỡ những cơ hội tuyệt vời này!</p>
+                
+                <div class="deals-grid">
+                    <article class="deal-card">
+                        <div class="deal-badge">Giảm 30%</div>
+                        <h3 class="deal-title">Tour Hạ Long Last Minute</h3>
+                        <p class="deal-description">Khám phá vịnh Hạ Long với mức giá cực kỳ ưu đãi. Chỉ còn vài chỗ trống!</p>
+                        <div class="deal-pricing">
+                            <span class="deal-original-price">3.500.000₫</span>
+                            <span class="deal-discount-price">2.450.000₫</span>
+                        </div>
+                        <div class="deal-countdown">
+                            <p class="countdown-label">Ưu đãi kết thúc sau:</p>
+                            <div class="countdown-timer" data-end-time="2024-12-31T23:59:59">
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="days">00</span>
+                                    <span class="countdown-label-small">Ngày</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="hours">00</span>
+                                    <span class="countdown-label-small">Giờ</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="minutes">00</span>
+                                    <span class="countdown-label-small">Phút</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="seconds">00</span>
+                                    <span class="countdown-label-small">Giây</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#tours" class="deal-button">Đặt Ngay</a>
+                    </article>
+
+                    <article class="deal-card">
+                        <div class="deal-badge">Giảm 25%</div>
+                        <h3 class="deal-title">Combo Sapa + Đà Lạt</h3>
+                        <p class="deal-description">Trải nghiệm cả núi rừng Tây Bắc và thành phố ngàn hoa với combo tiết kiệm.</p>
+                        <div class="deal-pricing">
+                            <span class="deal-original-price">6.000.000₫</span>
+                            <span class="deal-discount-price">4.500.000₫</span>
+                        </div>
+                        <div class="deal-countdown">
+                            <p class="countdown-label">Ưu đãi kết thúc sau:</p>
+                            <div class="countdown-timer" data-end-time="2024-12-25T23:59:59">
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="days">00</span>
+                                    <span class="countdown-label-small">Ngày</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="hours">00</span>
+                                    <span class="countdown-label-small">Giờ</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="minutes">00</span>
+                                    <span class="countdown-label-small">Phút</span>
+                                </div>
+                                <span class="countdown-separator">:</span>
+                                <div class="countdown-item">
+                                    <span class="countdown-value" data-unit="seconds">00</span>
+                                    <span class="countdown-label-small">Giây</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#tours" class="deal-button">Đặt Ngay</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Đánh giá Khách hàng -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Đánh Giá Khách Hàng</h2>
+                <p class="section-subtitle">Những chia sẻ từ khách hàng đã trải nghiệm</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="testimonial-text">"Chuyến đi Hạ Long thật tuyệt vời! Hướng dẫn viên rất nhiệt tình, lịch trình hợp lý và dịch vụ chất lượng. Tôi sẽ quay lại đặt tour khác trong tương lai."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">N</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Nguyễn Văn A</h4>
+                                <p class="author-role">Khách hàng</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                        <p class="testimonial-text">"Tour Sapa vượt quá mong đợi của tôi. Cảnh đẹp, văn hóa đa dạng và trải nghiệm độc đáo. Cảm ơn đội ngũ đã tạo nên một kỷ niệm đáng nhớ!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">T</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Trần Thị B</h4>
+                                <p class="author-role">Khách hàng</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Dịch vụ & Trải nghiệm Độc quyền -->
+        <section id="services" class="exclusive-services">
+            <div class="container">
+                <div class="services-wrapper">
+                    <div class="services-content">
+                        <h2 class="services-title">Dịch Vụ & Trải Nghiệm Độc Quyền</h2>
+                        <p class="services-description">
+                            Chúng tôi cung cấp các dịch vụ du lịch cao cấp và độc quyền, được thiết kế riêng để mang đến trải nghiệm hoàn hảo cho bạn. Từ tour thiết kế riêng theo yêu cầu, dịch vụ thuê xe cao cấp, đến đặt vé máy bay và khách sạn với giá ưu đãi.
+                        </p>
+                        <p class="services-description">
+                            Đội ngũ chuyên nghiệp của chúng tôi luôn sẵn sàng tư vấn và hỗ trợ bạn tạo nên hành trình du lịch đáng nhớ nhất.
+                        </p>
+                        <a href="#contact" class="services-cta">Tìm hiểu thêm về dịch vụ</a>
+                    </div>
+                    <div class="services-image">
+                        <div class="services-icon-wrapper">
+                            <div class="services-icon">✨</div>
+                            <div class="services-icon">🎯</div>
+                            <div class="services-icon">🌟</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Blog & Tin tức Du lịch -->
+        <section id="blog" class="travel-blog">
+            <div class="container">
+                <h2 class="section-title">Blog & Tin Tức Du Lịch</h2>
+                <p class="section-subtitle">Cập nhật những thông tin mới nhất về du lịch</p>
+                
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800" alt="Mùa du lịch Hạ Long" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">15 Tháng 12, 2024</div>
+                            <h3 class="blog-title">Mùa Du Lịch Hạ Long: Khi Nào Là Thời Điểm Tốt Nhất?</h3>
+                            <p class="blog-excerpt">
+                                Khám phá những thời điểm lý tưởng để tham quan vịnh Hạ Long, từ thời tiết đến các hoạt động đặc biệt theo mùa. Tìm hiểu về khí hậu, cảnh quan và những trải nghiệm độc đáo...
+                            </p>
+                            <a href="#" class="blog-read-more">Đọc thêm →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800" alt="Ẩm thực Sapa" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">10 Tháng 12, 2024</div>
+                            <h3 class="blog-title">Khám Phá Ẩm Thực Độc Đáo Tại Sapa</h3>
+                            <p class="blog-excerpt">
+                                Hành trình ẩm thực qua các món ăn đặc sắc của vùng núi Tây Bắc. Từ thắng cố, cơm lam đến các món ăn dân tộc độc đáo, khám phá hương vị đậm đà của Sapa...
+                            </p>
+                            <a href="#" class="blog-read-more">Đọc thêm →</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Bí kíp du lịch" loading="lazy">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">5 Tháng 12, 2024</div>
+                            <h3 class="blog-title">10 Bí Kíp Du Lịch Tiết Kiệm Mà Vẫn Vui</h3>
+                            <p class="blog-excerpt">
+                                Những mẹo hay giúp bạn có chuyến du lịch tuyệt vời mà không cần tốn quá nhiều chi phí. Từ cách đặt phòng, lựa chọn phương tiện đến các hoạt động miễn phí...
+                            </p>
+                            <a href="#" class="blog-read-more">Đọc thêm →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Column 1: Liên kết nhanh -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Kết Nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Trang Chủ</a></li>
+                        <li><a href="#tours">Tour Du Lịch</a></li>
+                        <li><a href="#about">Giới Thiệu</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Thông tin liên hệ -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Thông Tin Liên Hệ</h3>
+                    <ul class="footer-contact">
+                        <li>📍 123 Đường ABC, Quận XYZ, TP.HCM</li>
+                        <li>📞 0123 456 789</li>
+                        <li>✉️ info@dulichviet.com</li>
+                        <li>🕒 8:00 - 20:00 (T2 - CN)</li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Mạng xã hội -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Theo Dõi Chúng Tôi</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘 Facebook</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷 Instagram</a>
+                        <a href="#" class="social-link" aria-label="YouTube">📺 YouTube</a>
+                        <a href="#" class="social-link" aria-label="TikTok">🎵 TikTok</a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Đăng Ký Nhận Tin</h3>
+                    <p class="footer-description">Nhận thông tin về các tour mới và ưu đãi đặc biệt</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email của bạn" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-button">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Du Lịch Việt Nam. Tất cả quyền được bảo lưu.</p>
+                <div class="footer-legal">
+                    <a href="#">Chính Sách Bảo Mật</a>
+                    <a href="#">Điều Khoản Sử Dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
