@@ -1273,12 +1273,12 @@ section {
     transition: background var(--transition-base);
 }
 
-.destination-card:hover .destination-image img {
+/* .destination-card:hover .destination-image img {
     transform: scale(1.1);
-}
+} */
 
 .destination-card:hover .destination-overlay {
-    background: linear-gradient(to bottom, transparent 0%, rgba(37, 99, 235, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 70%, rgba(182, 205, 255, 0.64) 100%);
 }
 
 .destination-name {
