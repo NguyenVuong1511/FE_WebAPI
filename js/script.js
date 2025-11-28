@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    if (header) {
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    }
 
     // Toggle mobile menu using max-height (no active class)
     if (hamburger && mobileMenu) {
