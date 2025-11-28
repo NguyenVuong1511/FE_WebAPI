@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Header scroll effect
     function handleScroll() {
+        if (!header) return;
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
@@ -14,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    if (header) {
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    }
 
     // Toggle mobile menu
     if (hamburger) {
@@ -28,16 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close mobile menu when clicking on a link
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
+            if (hamburger) hamburger.classList.remove('active');
+            if (mobileMenu) mobileMenu.classList.remove('active');
         });
     });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
+        if (!mobileMenu) return;
         const isClickInsideNav = event.target.closest('.navbar') || event.target.closest('.mobile-menu');
         if (!isClickInsideNav && mobileMenu.classList.contains('active')) {
-            hamburger.classList.remove('active');
+            if (hamburger) hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
         }
     });

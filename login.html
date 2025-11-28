@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Đăng nhập để quản lý tour, đặt dịch vụ và nhận ưu đãi từ Travel Viet">
+    <title>Đăng nhập - Travel Viet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-body">
+    <header class="auth-header">
+        <a href="index.html" class="auth-logo">
+            <img src="img/Logo.png" alt="Travel Viet Logo">
+            <div>
+                <span class="brand-name">Travel Viet</span>
+                <span class="brand-tagline">Chạm tới mọi hành trình</span>
+            </div>
+        </a>
+        <a href="index.html" class="auth-link">← Quay về trang chủ</a>
+    </header>
+
+    <main class="auth-main">
+        <section class="auth-card">
+            <div class="auth-showcase">
+                <div class="showcase-badge">Thành viên Travel Viet</div>
+                <h1>Đăng nhập để tiếp tục khám phá</h1>
+                <p>Tạo và quản lý các chuyến đi yêu thích, nhận ưu đãi độc quyền và đồng bộ lịch trình trên mọi thiết bị.</p>
+                <ul class="auth-benefits">
+                    <li>✔ Theo dõi tình trạng đặt tour theo thời gian thực</li>
+                    <li>✔ Lưu tour yêu thích và nhận thông báo giảm giá</li>
+                    <li>✔ Tư vấn viên hỗ trợ 24/7 trong suốt hành trình</li>
+                </ul>
+                <div class="auth-stats">
+                    <div>
+                        <strong>10.000+</strong>
+                        <span>Khách hàng tin tưởng</span>
+                    </div>
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Điểm hài lòng trung bình</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-form-wrapper">
+                <div class="auth-form-header">
+                    <h2>Chào mừng trở lại 👋</h2>
+                    <p>Nhập thông tin để tiếp tục hành trình cùng Travel Viet.</p>
+                </div>
+                <form id="login-form" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-field">
+                            <input type="email" id="email" name="email" placeholder="ban@domain.com" required>
+                            <span class="input-icon">✉️</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mật khẩu</label>
+                        <div class="input-field password-field">
+                            <input type="password" id="password" name="password" placeholder="••••••••" required minlength="6">
+                            <button type="button" class="toggle-password" aria-label="Hiện mật khẩu" id="toggle-password">👁️</button>
+                        </div>
+                    </div>
+                    <div class="form-meta">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember" checked>
+                            <span>Ghi nhớ đăng nhập</span>
+                        </label>
+                        <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                    </div>
+                    <button type="submit" class="auth-submit">Đăng nhập</button>
+                    <div id="login-feedback" class="form-feedback" aria-live="polite"></div>
+                    <div class="divider">
+                        <span>Hoặc</span>
+                    </div>
+                    <div class="social-login">
+                        <button type="button" class="social-btn google-btn">
+                            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+                            Google
+                        </button>
+                        <button type="button" class="social-btn facebook-btn">
+                            <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook">
+                            Facebook
+                        </button>
+                    </div>
+                </form>
+                <p class="auth-footer">
+                    Chưa có tài khoản?
+                    <a href="#" class="auth-link-cta">Đăng ký ngay</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('login-form');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const togglePasswordBtn = document.getElementById('toggle-password');
+            const feedback = document.getElementById('login-feedback');
+
+            function showFeedback(message, type = 'success') {
+                if (!feedback) return;
+                feedback.textContent = message;
+                feedback.className = \`form-feedback \${type}\`;
+            }
+
+            togglePasswordBtn.addEventListener('click', () => {
+                const isHidden = passwordInput.type === 'password';
+                passwordInput.type = isHidden ? 'text' : 'password';
+                togglePasswordBtn.textContent = isHidden ? '🙈' : '👁️';
+                togglePasswordBtn.setAttribute('aria-label', isHidden ? 'Ẩn mật khẩu' : 'Hiện mật khẩu');
+            });
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                if (!emailInput.checkValidity()) {
+                    showFeedback('Vui lòng nhập email hợp lệ.', 'error');
+                    emailInput.focus();
+                    return;
+                }
+
+                if (!passwordInput.checkValidity()) {
+                    showFeedback('Mật khẩu cần ít nhất 6 ký tự.', 'error');
+                    passwordInput.focus();
+                    return;
+                }
+
+                showFeedback('Đăng nhập thành công! Đang chuyển hướng...', 'success');
+                form.classList.add('is-loading');
+
+                // Giả lập gọi API
+                setTimeout(() => {
+                    form.classList.remove('is-loading');
+                    window.location.href = 'index.html';
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
+
